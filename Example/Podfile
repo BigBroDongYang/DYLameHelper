@@ -1,6 +1,6 @@
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'DYLameHelper_Example' do
   pod 'DYLameHelper', :path => '../'
@@ -9,5 +9,18 @@ target 'DYLameHelper_Example' do
     inherit! :search_paths
 
     
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      if config.name == 'Debug'
+        config.build_settings["VALID_ARCHS"] = "arm64 arm64e x86_64 i386"
+      else
+        config.build_settings["VALID_ARCHS"] = "arm64 ARM64e"
+      #config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+      end
+    end
   end
 end

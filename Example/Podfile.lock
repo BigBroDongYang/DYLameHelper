@@ -1,0 +1,16 @@
+PODS:
+  - DYLameHelper (1.0)
+
+DEPENDENCIES:
+  - DYLameHelper (from `../`)
+
+EXTERNAL SOURCES:
+  DYLameHelper:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DYLameHelper: a53e129226d4017696057ca03e415929bb61e529
+
+PODFILE CHECKSUM: e7947a05e6fda159541f428d7daacfc42d2daf5e
+
+COCOAPODS: 1.11.2

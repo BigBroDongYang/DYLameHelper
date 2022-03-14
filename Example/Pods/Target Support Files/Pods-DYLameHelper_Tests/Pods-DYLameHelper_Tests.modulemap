@@ -1,0 +1,6 @@
+framework module Pods_DYLameHelper_Tests {
+  umbrella header "Pods-DYLameHelper_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
